@@ -53,6 +53,11 @@ Next, I added some quick bubbles to help organize the departments.
 Step 2:
 Enabling the router and creating our subnets
 
+I stated earlier that for this project we are using the network address 192.168.1.0 and we will use this address and create three subnets. Our IP address is a 32bit address with a 255.255.255.0 /24bit subnet mask. an Ip address is broken into two parts the network and the host part. The first 3 octets 192.168.1 are the network identifier and last octet .0 is the host identifier. 
+
+![formula](https://github.com/user-attachments/assets/2786cf0f-905d-4401-babc-294100ac4906)
+
+
 Next in the algorithm we transform the string into a list using the .split() function and apply it to ip_addresses .
 
 ![python 2](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/1d09da46-eb51-4067-801d-3bd47e81cbca)
