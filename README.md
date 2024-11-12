@@ -35,11 +35,23 @@ Next, we make our connections from the router to the switches. as shown below. T
 
 ![(3)connections to switches](https://github.com/user-attachments/assets/5ffdabf8-2528-4c93-8b9d-28d7220c1bac)
 
+##
 
-The with statement is used with the .open()  function to open and read the contents of the file. The output of the code is stored within a file variable which has the .read()  function applied to it which converts the file to a string which can be read. Then we assign that within the ip_addresses variable.
+Now, we make our connections from our switches to our endpoint devices in each department. We use Fastethernet ports 1-3 from thw switch to connect to our 2 PC's and printer Fastethernet port 0 or port 0 on our devices. We do this for all devices in their respective departments.
+
+![(4) connections](https://github.com/user-attachments/assets/59070f5e-1394-4a9e-8599-903877dc7174)
+
+##
+
+Next, I added some quick bubbles to help organize the departments.
+
+![(5) added bubbles](https://github.com/user-attachments/assets/85e3d882-1514-4483-9949-85ec525b96c9)
+
+##
+
 
 Step 2:
-Convert the string into a list.
+Enabling the router and creating our subnets
 
 Next in the algorithm we transform the string into a list using the .split() function and apply it to ip_addresses .
 
