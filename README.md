@@ -1,1 +1,73 @@
 # Office-Network-Project
+
+## Objective
+
+In this Project i will be going over how i created a simple office network using Cisco packet tracer to simulate A real life office network setting. In this project we will have 3 departments. A acounting, IT, and operations department with their own respective subnet. Each with 2 PC's and a printer. 
+
+### Skills Learned
+
+- Network Design  
+- IP addressing and subnetting
+- router configuration
+- Networking Testing 
+
+## Steps
+
+Step 1:
+Creating the network layout
+
+Firstly, We will be using the network address 192.168.1.0 for our office in this project. Now we add our main router. On the bottom left we can click on network devices > routers > 2911 router  which is the model router we are using for this project. We Then add our 3 switches which we name accounting Dept, IT Dept, and Operations Dept. Go to network devices > 
+switches > 2960 which will be the switch model we will be using.
+
+ Switches are good for segmentation and improve network performance by isolating devices and eliminating collisions. Our layout is shown below.
+
+![(1)routers and switches](https://github.com/user-attachments/assets/b95c3dab-2078-4c67-9383-20f9fae192b1)
+
+##
+
+We then add 2 PC'S and 1 printer for each department. We go to End devices > End devices > PC and then End devices > End devices > Printer. We then name them and align them as shown below.
+
+![(2)PCSandPrinters](https://github.com/user-attachments/assets/24a0bfdf-d4bc-4958-8b71-56bcf8f0ba51)
+
+##
+
+Next, we make our connections from the router to the switches. as shown below. To do this we go to the bottom left and click on connections > connections > copper straight-through which is the cable we are using. Once the connector is selected we click on our router and use port "gigabitethernet 0/0" and drag the connnection to the accounting switch's port "gigabitethernet 0/1". We do the same for the Rest of the departments. We connect "gigabitethernet 0/1" from our router to IT's switch at "gigabitethernet 0/1". For operations we connection "gigabitethernet 0/2" to Operations gigabitethernet 0/1.
+
+![(3)connections to switches](https://github.com/user-attachments/assets/5ffdabf8-2528-4c93-8b9d-28d7220c1bac)
+
+
+The with statement is used with the .open()  function to open and read the contents of the file. The output of the code is stored within a file variable which has the .read()  function applied to it which converts the file to a string which can be read. Then we assign that within the ip_addresses variable.
+
+Step 2:
+Convert the string into a list.
+
+Next in the algorithm we transform the string into a list using the .split() function and apply it to ip_addresses .
+
+![python 2](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/1d09da46-eb51-4067-801d-3bd47e81cbca)
+
+The purpose of this is to make it easier to remove ip addresses that are no longer allowed on the file. By default, the .split() function separates the text by whitespace and turns them into individual elements. In this case we make each ip address its own element and then proceed to store it within ip_addresses again.
+
+Step 3:
+Going through the list and removing IP addresses.
+
+![python 3](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/ef708dc7-b1bf-45dc-a355-0ee0aa78e574)
+
+After converting the file from a string to a list we can begin the next part of the algorithm.
+I will be using a for loop to go through the ip addresses and find any ip addresses that are on the remove list.
+
+In the loop the key words for, and in are used with elements, and ip_addresses. Elements being the variable for each IP address in  ip_addresses which is the file it's going through. The algorithm then removes any ip addresses using the if conditional statement. If any of the elements from ip_addresses are found in remove_list they will be taken out of the file using the .remove() function. Which is applied to ip_addresses.
+
+STEP 4:
+Updating the file.
+
+![python 4](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/0e1e781e-eeda-47f1-a66f-82c81d0a6642)
+
+To finalize and update the file containing the revised lists of IP addresses we wanna use the .join() function. What this function does is convert all the items we have back into a string. Which is applied to our variable as shown below. We use the string “\n” to let python know to place each element in a new line.
+
+Using the “w” argument with the open() function indicates that I want to open the file and rewrite its contents. Using the the .with() function with our ip_addresses variable as the argument we can apply this to our file object as shown above.This tells python that ip_addresses and its contents will replace the data in the file used with our with statement.
+
+Summary:
+I Created this algorithm so that we may remove any ip addresses found in the  remove_list variable from the  “allow_list.txt” file . This algorithm involves opening the file, converting to a string so that it may be read, and then converting it once more into a list stored in the ip_addresses variable. I then used a for loop with a conditional statement that will check and find any ip addresses in the remove_list that are inside the ip_addresses variable. I then applied the .remove()  function to remove any elements from the  remove_list found in ip_addresses. After this was done the final steps were to use the .join() function convert ip_addresses into a string.Finishing this, i used the .write() function to rewrite and update the contents of the  “allow_list.txt” file to the new and revised list.
+
+
+
