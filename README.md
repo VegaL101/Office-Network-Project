@@ -53,10 +53,15 @@ Next, I added some quick bubbles to help organize the departments.
 Step 2:
 Enabling the router and creating our subnets
 
-I stated earlier that for this project we are using the network address 192.168.1.0 and we will use this address and create three subnets. Our IP address is a 32bit address with a 255.255.255.0 /24bit subnet mask. an Ip address is broken into two parts the network and the host part. The first 3 octets 192.168.1 are the network identifier and last octet .0 is the host identifier. 
+I stated earlier that for this project we are using the network address 192.168.1.0 and we will use this address and create three subnets. Our IP address is a 32bit address with a 255.255.255.0 /24bit subnet mask. A Ip address is broken into 4 octets. The first 3 octets 192.168.1 are the network identifier and last octet .0 is the host identifier. To get our subnets we calculate the formula below.
 
 ![formula](https://github.com/user-attachments/assets/2786cf0f-905d-4401-babc-294100ac4906)
 
+N=1 bit that we would borrow from the part of the address. so when 2 to the power of 1 is calculated our answer is 2 subnets. so instead lets try borrowing 2 bit and calculating it which would give us 4 subnets which gives us one extra subnet than we need. After borrowing these 2 bits our new subnet mask is 255.255.255.192 or /26 bits (24 original network portion bits + 2 borrowed bits from the host portion). 
+
+##
+
+Now to we have our 4 subnets we need to find out how many usable IP addresses we have per subnet. To do so we 
 
 Next in the algorithm we transform the string into a list using the .split() function and apply it to ip_addresses .
 
