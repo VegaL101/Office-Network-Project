@@ -64,26 +64,26 @@ N=1 bit that we would borrow from the part of the address. so when we ca;culate 
 Now to we have our 4 subnets we need to find out how many usable IP addresses we have per subnet. To do so we calculate 2(borrowed bits) to power of 6 (bits left from host portion) which comes out to be 64 but we subtract 2 which leaves us 62. so in each subnet we have 62 Usable ip addresses for devices as well as one ip address for the network address and one 
 other for the broadcast address per subnet. so all together it should similar to this:
 
-Subnet 1:
+Subnet 1:<br>
+Network: 192.168.1.0/26 <br>
+Usable IP range: 192.168.1.1 - 192.168.1.62<br>
+Broadcast: 192.168.1.63<br>
 
-Network: 192.168.1.0/26
-Usable IP range: 192.168.1.1 - 192.168.1.62
-Broadcast: 192.168.1.63
-Subnet 2:
+Subnet 2:<br>
+Network: 192.168.1.64/26<br>
+Usable IP range: 192.168.1.65 - 192.168.1.126<br>
+Broadcast: 192.168.1.127<br>
 
-Network: 192.168.1.64/26
-Usable IP range: 192.168.1.65 - 192.168.1.126
-Broadcast: 192.168.1.127
-Subnet 3:
+Subnet 3:<br>
+Network: 192.168.1.128/26<br>
+Usable IP range: 192.168.1.129 - 192.168.1.190<br>
+Broadcast: 192.168.1.191<br>
 
-Network: 192.168.1.128/26
-Usable IP range: 192.168.1.129 - 192.168.1.190
-Broadcast: 192.168.1.191
-Subnet 4:
+Subnet 4:<br>
+Network: 192.168.1.192/26<br>
+Usable IP range: 192.168.1.193 - 192.168.1.254<br>
+Broadcast: 192.168.1.255<br>
 
-Network: 192.168.1.192/26
-Usable IP range: 192.168.1.193 - 192.168.1.254
-Broadcast: 192.168.1.255
 Next in the algorithm we transform the string into a list using the .split() function and apply it to ip_addresses .
 
 ![python 2](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/1d09da46-eb51-4067-801d-3bd47e81cbca)
