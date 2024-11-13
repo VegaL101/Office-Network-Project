@@ -57,12 +57,33 @@ I stated earlier that for this project we are using the network address 192.168.
 
 ![formula](https://github.com/user-attachments/assets/2786cf0f-905d-4401-babc-294100ac4906)
 
-N=1 bit that we would borrow from the part of the address. so when 2 to the power of 1 is calculated our answer is 2 subnets. so instead lets try borrowing 2 bit and calculating it which would give us 4 subnets which gives us one extra subnet than we need. After borrowing these 2 bits our new subnet mask is 255.255.255.192 or /26 bits (24 original network portion bits + 2 borrowed bits from the host portion). 
+N=1 bit that we would borrow from the part of the address. so when we ca;culate 2 to the power of 1 our answer is 2 subnets. so instead lets try borrowing 2 bit and calculating it which would give us 4 subnets which gives us one extra subnet than we need. After borrowing these 2 bits our new subnet mask is 255.255.255.192 or /26 bits (24 original network portion bits + 2 borrowed bits from the host portion). 
 
 ##
 
-Now to we have our 4 subnets we need to find out how many usable IP addresses we have per subnet. To do so we 
+Now to we have our 4 subnets we need to find out how many usable IP addresses we have per subnet. To do so we calculate 2(borrowed bits) to power of 6 (bits left from host portion) which comes out to be 64 but we subtract 2 which leaves us 62. so in each subnet we have 62 Usable ip addresses for devices as well as one ip address for the network address and one 
+other for the broadcast address per subnet. so all together it should similar to this:
 
+Subnet 1:
+
+Network: 192.168.1.0/26
+Usable IP range: 192.168.1.1 - 192.168.1.62
+Broadcast: 192.168.1.63
+Subnet 2:
+
+Network: 192.168.1.64/26
+Usable IP range: 192.168.1.65 - 192.168.1.126
+Broadcast: 192.168.1.127
+Subnet 3:
+
+Network: 192.168.1.128/26
+Usable IP range: 192.168.1.129 - 192.168.1.190
+Broadcast: 192.168.1.191
+Subnet 4:
+
+Network: 192.168.1.192/26
+Usable IP range: 192.168.1.193 - 192.168.1.254
+Broadcast: 192.168.1.255
 Next in the algorithm we transform the string into a list using the .split() function and apply it to ip_addresses .
 
 ![python 2](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/1d09da46-eb51-4067-801d-3bd47e81cbca)
