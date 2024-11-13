@@ -64,31 +64,35 @@ N=1 bit that we would borrow from the part of the address. so when we ca;culate 
 Now to we have our 4 subnets we need to find out how many usable IP addresses we have per subnet. To do so we calculate 2(borrowed bits) to power of 6 (bits left from host portion) which comes out to be 64 but we subtract 2 which leaves us 62. so in each subnet we have 62 Usable ip addresses for devices as well as one ip address for the network address and one 
 other for the broadcast address per subnet. so all together it should similar to this:
 
-Subnet 1:<br>
+Subnet 1 (Accounting):<br>
 Network: 192.168.1.0/26 <br>
 Usable IP range: 192.168.1.1 - 192.168.1.62<br>
 Broadcast: 192.168.1.63<br>
 
-Subnet 2:<br>
+Subnet 2(IT):<br>
 Network: 192.168.1.64/26<br>
 Usable IP range: 192.168.1.65 - 192.168.1.126<br>
 Broadcast: 192.168.1.127<br>
 
-Subnet 3:<br>
+Subnet 3(Operation):<br>
 Network: 192.168.1.128/26<br>
 Usable IP range: 192.168.1.129 - 192.168.1.190<br>
 Broadcast: 192.168.1.191<br>
 
-Subnet 4:<br>
+Subnet 4(Extra):<br>
 Network: 192.168.1.192/26<br>
 Usable IP range: 192.168.1.193 - 192.168.1.254<br>
 Broadcast: 192.168.1.255<br>
 
-Next in the algorithm we transform the string into a list using the .split() function and apply it to ip_addresses .
+##
 
-![python 2](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/1d09da46-eb51-4067-801d-3bd47e81cbca)
+Now we have our subnets so we can continue to enable and configure our router. We select our router to see the device and what it looks. we wannna zoom in and actually power on the router first before we can do anything.
 
-The purpose of this is to make it easier to remove ip addresses that are no longer allowed on the file. By default, the .split() function separates the text by whitespace and turns them into individual elements. In this case we make each ip address its own element and then proceed to store it within ip_addresses again.
+![(5 5) turn the power on](https://github.com/user-attachments/assets/ccc2e979-bbcb-4623-94e0-571ab4f2935f)
+
+##
+
+
 
 Step 3:
 Going through the list and removing IP addresses.
