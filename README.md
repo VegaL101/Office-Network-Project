@@ -125,33 +125,46 @@ After, we can leave the cli and see that the connection to our switches will beg
 ##
 
 We now move onto adding our subnets. We come back to the CLI of our router to add our accounting subnet. we type:<br>
-en<br>
-configure terminal (config t is short for configure terminal)<br>
-interface gigabitethernet 0/0 (int is short for interface)<br>
-ip address 192.168.1.1 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
-no shutdown
+>en<br>
+>configure terminal (config t is short for configure terminal)<br>
+>interface gigabitethernet 0/0 (int is short for interface)<br>
+>ip address 192.168.1.1 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
+>no shutdown
+>exit
 
 ![(8) subnet for accounting](https://github.com/user-attachments/assets/e472c4b5-a6cf-4eab-91a2-e1ef224f6d18)
 
+##
+
 We now moving onto the IT subnet. we type:<br>
-en<br>
-configure terminal<br>
-interface gigabitethernet 0/01<br>
-ip address 192.168.1.65 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
-no shutdown
+>configure terminal<br>
+>interface gigabitethernet 0/01<br>
+>ip address 192.168.1.65 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
+>no shutdown
+>exit
 
 ![(9)IT subnet](https://github.com/user-attachments/assets/f61b209d-9193-4b00-adc8-59ece7679cff)
 
+##
+
 Lastlt, the Operations subnet. we type:<br>
-en<br>
-configure terminal<br>
-interface gigabitethernet 0/01<br>
-ip address 192.168.1.129 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
-no shutdown
+>configure terminal<br>
+>interface gigabitethernet 0/01<br>
+>ip address 192.168.1.129 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
+>no shutdown
+>exit
+>do wr (to save our changes)
 
 ![(10)operationsubnet](https://github.com/user-attachments/assets/80ba1e60-cac8-49e4-92b1-d2aedb1960db)
 
 ##
+
+In order to check if everything was done correctly we type:
+>en
+>show
+
+![(11) check  if subnets are set up properly](https://github.com/user-attachments/assets/5d123f24-4c47-49a0-a86a-df6942c6a0b4)
+
 
 Step 3:
 Going through the list and removing IP addresses.
