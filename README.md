@@ -92,6 +92,31 @@ Now we have our subnets so we can continue to enable and configure our router. W
 
 ##
 
+Next, in the command line interface (CLI on the top left tab) is where configure our router.
+
+![(6)routerCLI](https://github.com/user-attachments/assets/e9ca9fa2-1067-43eb-b526-fc4d3c958f59)
+
+##
+
+Firstly, we type in the command: en <br>
+To enable our router.
+
+We then type: config t<br>
+Which allows you to enter a configuration mode to make changes
+
+Then enter in: int range gig0/0-2 <br>
+this lets us enter the configuration for our interfaces. 
+
+Lastly, we type the command: no shutdown 
+This will activate all of our gigabitethernet ports we are using for our departments. essentially turning them on.  
+
+##
+
+After, we can leave the cli and see that the connection to our switches will begin to turn after some time signified by the blinking green lights.
+
+![(7) connectiontoswitchson](https://github.com/user-attachments/assets/4b5fc442-3ddb-4b4c-ad99-d3f9c7bbf3ab)
+
+##
 
 
 Step 3:
