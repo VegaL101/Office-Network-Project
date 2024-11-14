@@ -161,32 +161,37 @@ Lastlt, the Operations subnet. we type:<br>
 
 In order to check if everything was done correctly we type:
 >en
->show
+>show ip interface brief
+
 
 ![(11) check  if subnets are set up properly](https://github.com/user-attachments/assets/5d123f24-4c47-49a0-a86a-df6942c6a0b4)
 
+Here we can see the status of our interfaces 
+
+##
 
 Step 3:
-Going through the list and removing IP addresses.
+configuring our end devices and testing
 
-![python 3](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/ef708dc7-b1bf-45dc-a355-0ee0aa78e574)
+Now that we have set up our subnets we then go ahead and start setting up our PC's and printers. First, we'll be setting up accountings devices.<br>
+For the first PC we click it, head over to the desktop tab and then to IP configuration.<br>
 
-After converting the file from a string to a list we can begin the next part of the algorithm.
-I will be using a for loop to go through the ip addresses and find any ip addresses that are on the remove list.
+Here i choose static ip and give it one of the usable ipv4 addresss fromm the first subnet and give it the subnet mask 255.255.255.192 going forward we will be using the same subnet mask for all end devices <br>
+if done correctly it should look similar to my image below.
 
-In the loop the key words for, and in are used with elements, and ip_addresses. Elements being the variable for each IP address in  ip_addresses which is the file it's going through. The algorithm then removes any ip addresses using the if conditional statement. If any of the elements from ip_addresses are found in remove_list they will be taken out of the file using the .remove() function. Which is applied to ip_addresses.
+![(11 5) gettopcipconfig](https://github.com/user-attachments/assets/3bccd8a7-dbfd-40a3-ab59-91375655f35f)
 
-STEP 4:
-Updating the file.
+##
+To test our configuration we can exit ip configuration and go to command prompt using the same PC and ping our accounting interface by entering the commmand: ping 192.168.1.1 <br>
+this ping should send out 4 packets and receive 4 as a reply if everything has been done correctly so far.
 
-![python 4](https://github.com/VegaL101/Updating-Files-in-python/assets/166334918/0e1e781e-eeda-47f1-a66f-82c81d0a6642)
+![(12) accPCping](https://github.com/user-attachments/assets/44fee780-b78e-4b3c-ad84-159a36236d83)
 
-To finalize and update the file containing the revised lists of IP addresses we wanna use the .join() function. What this function does is convert all the items we have back into a string. Which is applied to our variable as shown below. We use the string “\n” to let python know to place each element in a new line.
+We do the same thing for our second PC in the accounting dept using  the next available IP address.
 
-Using the “w” argument with the open() function indicates that I want to open the file and rewrite its contents. Using the the .with() function with our ip_addresses variable as the argument we can apply this to our file object as shown above.This tells python that ip_addresses and its contents will replace the data in the file used with our with statement.
+##
 
-Summary:
-I Created this algorithm so that we may remove any ip addresses found in the  remove_list variable from the  “allow_list.txt” file . This algorithm involves opening the file, converting to a string so that it may be read, and then converting it once more into a list stored in the ip_addresses variable. I then used a for loop with a conditional statement that will check and find any ip addresses in the remove_list that are inside the ip_addresses variable. I then applied the .remove()  function to remove any elements from the  remove_list found in ip_addresses. After this was done the final steps were to use the .join() function convert ip_addresses into a string.Finishing this, i used the .write() function to rewrite and update the contents of the  “allow_list.txt” file to the new and revised list.
+Next, we continue to configure the printer. We click on it and go to the config tab to add our next ip address and our subnet mask. 
 
-
+![(13)printer settings](https://github.com/user-attachments/assets/233ea023-ecba-4581-b0a2-1967ae6efdfe)
 
