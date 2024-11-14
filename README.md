@@ -107,8 +107,14 @@ Which allows you to enter a configuration mode to make changes
 Then enter in: int range gig0/0-2 <br>
 this lets us enter the configuration for our interfaces. 
 
-Lastly, we type the command: no shutdown 
+Next, we type the command: no shutdown<br>
 This will activate all of our gigabitethernet ports we are using for our departments. essentially turning them on.  
+
+Lastly to save our changes we type:<br>
+do wr
+
+
+![(6 5) router cli](https://github.com/user-attachments/assets/70c2b1f3-8e09-4783-9066-0941492a98f8)
 
 ##
 
@@ -117,6 +123,20 @@ After, we can leave the cli and see that the connection to our switches will beg
 ![(7) connectiontoswitchson](https://github.com/user-attachments/assets/4b5fc442-3ddb-4b4c-ad99-d3f9c7bbf3ab)
 
 ##
+
+We now move onto adding our subnets. We come back to the CLI of our router to add our accounting subnet. we type:<br>
+en<br>
+configure terminal (config t is short for configure terminal)<br>
+interface gigabitethernet 0/0 (int is short for interface)<br>
+ip address 192.168.1.1 255.255.255.192(we assign this first usable IP for the interface)<br>
+no shutdown
+
+![(8) subnet for accounting](https://github.com/user-attachments/assets/e472c4b5-a6cf-4eab-91a2-e1ef224f6d18)
+
+
+
+![(8) subnet for accounting](https://github.com/user-attachments/assets/e34e559c-879f-4494-b709-a0eedab8ec30)
+
 
 
 Step 3:
