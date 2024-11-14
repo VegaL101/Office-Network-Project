@@ -128,16 +128,30 @@ We now move onto adding our subnets. We come back to the CLI of our router to ad
 en<br>
 configure terminal (config t is short for configure terminal)<br>
 interface gigabitethernet 0/0 (int is short for interface)<br>
-ip address 192.168.1.1 255.255.255.192(we assign this first usable IP for the interface)<br>
+ip address 192.168.1.1 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
 no shutdown
 
 ![(8) subnet for accounting](https://github.com/user-attachments/assets/e472c4b5-a6cf-4eab-91a2-e1ef224f6d18)
 
+We now moving onto the IT subnet. we type:<br>
+en<br>
+configure terminal<br>
+interface gigabitethernet 0/01<br>
+ip address 192.168.1.65 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
+no shutdown
 
+![(9)IT subnet](https://github.com/user-attachments/assets/f61b209d-9193-4b00-adc8-59ece7679cff)
 
-![(8) subnet for accounting](https://github.com/user-attachments/assets/e34e559c-879f-4494-b709-a0eedab8ec30)
+Lastlt, the Operations subnet. we type:<br>
+en<br>
+configure terminal<br>
+interface gigabitethernet 0/01<br>
+ip address 192.168.1.129 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
+no shutdown
 
+![(10)operationsubnet](https://github.com/user-attachments/assets/80ba1e60-cac8-49e4-92b1-d2aedb1960db)
 
+##
 
 Step 3:
 Going through the list and removing IP addresses.
