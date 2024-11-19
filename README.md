@@ -147,7 +147,7 @@ We now moving onto the IT subnet. we type:<br>
 
 ##
 
-Lastlt, the Operations subnet. we type:<br>
+Lastly, the Operations subnet. we type:<br>
 >configure terminal<br>
 >interface gigabitethernet 0/01<br>
 >ip address 192.168.1.129 255.255.255.192(we assign this first usable IP in the subnet for the interface)<br>
@@ -187,11 +187,90 @@ this ping should send out 4 packets and receive 4 as a reply if everything has b
 
 ![(12) accPCping](https://github.com/user-attachments/assets/44fee780-b78e-4b3c-ad84-159a36236d83)
 
-We do the same thing for our second PC in the accounting dept using  the next available IP address.
+We do the same thing for our second PC in the accounting dept using the next available IP address.
 
 ##
 
 Next, we continue to configure the printer. We click on it and go to the config tab to add our next ip address and our subnet mask. 
 
 ![(13)printer settings](https://github.com/user-attachments/assets/233ea023-ecba-4581-b0a2-1967ae6efdfe)
+
+##
+
+After doing so we can ping the printer to test it. we come back to our pc in the same deparment and ping the ip address we gave our printer.
+
+![(12 5)accprinterping](https://github.com/user-attachments/assets/d091bab7-8213-4c8e-b981-e5fb11225518)
+
+##
+
+Next, we move onto the It department our usabele ip ranges for this department are: 192.168.1.65 - 192.168.1.126 excluding 192.268.1.65 since we are already using this ip for our IT interface.
+we configure our IP settings again on our PC 
+
+![(14)itpcip](https://github.com/user-attachments/assets/343c1442-66fe-42d4-a2b1-10dbbfffe8ad)
+
+##
+
+We then ping our IT interface to test it.
+
+![(15)ITpcping](https://github.com/user-attachments/assets/761c0e67-bac3-4b9b-9095-104d511ba31f)
+
+##
+
+We then go to our IT printer configure the settings.
+
+![(16)ITprinter settings](https://github.com/user-attachments/assets/8ff83733-439e-494e-b1c9-17b0601b3217)
+
+##
+
+And then ping it to test it.
+
+![(15 5)ITprinterping](https://github.com/user-attachments/assets/a6ca96e0-2f5f-4550-92a5-58cf836bb8e7)
+
+##
+
+Lastly we do all these steps again with the Operations department. We uses the ranges 192.168.1.129 - 192.168.1.190 excluding 192.168.1.129 (interface ip address) and then ping all the devices in the department. Like below.
+
+Operations interface ping.
+
+![(18)operationpcping](https://github.com/user-attachments/assets/1ced522e-4350-4bd9-954f-44f2a917dfac)
+
+Operations printer ping.
+
+![(18 5)operationprinterping](https://github.com/user-attachments/assets/97eff731-c9f0-4f84-a07a-7adabf8db871)
+
+##
+
+Now we have configured the ip addresses for all the end devices. The end devices are able to communicate with each other in their respective department. But what if we wanted a PC from one department to communicate with a PC in another department.<br>
+In order for us to do this we need to configure our gateways it helps us connects with different networks.
+
+For accounting we go to all our end devices IP configurations and in our default gateway we type in '192.168.1.1' you might notice that the ip address is the same as our accountings interface IP and thats because our devices will be using that interface as a gateway to connnect to other networks. 
+![(19)accounting gateway](https://github.com/user-attachments/assets/590a3639-2ef3-4d7c-8a0d-796bec1a6a25)
+
+This is the gateway we use for our IT end devices.
+
+![(20)ITgateway](https://github.com/user-attachments/assets/ce583c17-e3cd-4af3-ad4b-53d7fb430ce1)
+
+And this is our gateway for our Operations end devices.
+
+![(21) operation gateway](https://github.com/user-attachments/assets/99abf831-594a-47cd-926e-db4926e4f5e0)
+
+##
+
+Now, to test what we have configured everything properly we can ping into a end device in our IT department and then our Operations department.
+
+Here we ping to IT successfully.
+
+![(22) pingto IT](https://github.com/user-attachments/assets/5718d314-4c89-4145-8712-60d9b9b6b274)
+
+And, Here we ping to Operations successfully. 
+
+![(23)PIng to operations](https://github.com/user-attachments/assets/61800c9e-ddaf-45d8-8d72-fc3d6341fed9)
+
+##
+
+###Summary
+
+In this project, you’ll gain hands-on experience with key networking concepts such as subnetting, IP address management, and routing. By dividing a larger network into smaller subnets, you'll practice efficient address allocation and configure network devices accordingly. Setting up the router to enable communication between these subnets will reinforce your understanding of routing principles and inter-network communication.
+
+
 
