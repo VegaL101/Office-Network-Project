@@ -268,7 +268,7 @@ And, Here we ping to Operations successfully.
 
 ##
 
-###Summary
+### Summary
 
 In this project, you’ll gain hands-on experience with key networking concepts such as subnetting, IP address management, and routing. By dividing a larger network into smaller subnets, you'll practice efficient address allocation and configure network devices accordingly. Setting up the router to enable communication between these subnets will reinforce your understanding of routing principles and inter-network communication.
 
